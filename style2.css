@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #show-message-button {
+    background-color: #b39ddb; 
+    border: 2px solid #9370db; 
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition-duration: 0.4s;
+  }
+  
+  #show-message-button:hover {
+    background-color: #9370db;
+    color: white;
+  }
+  
+  #message {
+    background-color: #b39ddb;
+    border: 2px solid #9370db; 
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+  }
+
+  #message {
+  background-color: #b39ddb;
+  border: 2px solid #9370db;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#message-image {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 10px solid #9370db;
+    border-radius: 25px;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 10px solid #9370db;
+    border-radius: 25px;
+    overflow: auto;
+}
+
+#message {
+    background-color: #b39ddb;
+    border: 2px solid #9370db;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: calc(100% - 40px); 
+    max-height: calc(100% - 40px); 
+}
+
+
+

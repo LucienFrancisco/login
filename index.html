@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        
+            <action id="login" method="post"></action>
+
+            <button type="submit">Log in</button>
+        </form>
+        <p id="message"></p>
+        <p id="success-message" style="display:none;">Login successful!</p>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+    <script>
+document.getElementById("login-form").addEventListener("submit", performLogin);
+
+function performLogin(event) {
+    event.preventDefault();
+
+    let username = localStorage.getItem('username') || document.getElementById("username").value;
+    let password = localStorage.getItem('password') || document.getElementById("password").value;
+
+    const registeredUsers = [
+        { username: 'user1', password: 'pass1' },
+        { username: 'user2', password: 'pass2' },
+        { username: 'user3', password: 'pass3' },
+        { username: 'user4', password: 'pass4' },
+        { username: 'user5', password: 'pass5' },
+        { username: 'user6', password: 'pass6' },
+        { username: 'user7', password: 'pass7' },
+        { username: 'user8', password: 'pass8' },
+        { username: 'user9', password: 'pass9' },
+        { username: 'user10', password: 'pass10' },
+        { username: 'user11', password: 'pass11' }
+    ];
+
+    const user = registeredUsers.find(user => user.username === username && user.password === password);
+
+    if (user) {
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+
+        document.getElementById('success-message').style.display = 'block';
+        setTimeout(() => {
+            window.location.href = 'homepage.html';
+        }, 2000);
+    } else {
+        document.getElementById('message').innerText = 'Invalid username or password';
+    }
+}
+    </script>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
